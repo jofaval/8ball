@@ -15,10 +15,12 @@ const displayAnswer = (answer) => {
 /**
  * Register the given answer
  * 
+ * @param {string} answer The answer to store
+ * 
  * @returns {void}
  */
-const registerAnswer = () => {
-    // TODO: implement
+const registerAnswer = (answer) => {
+    store(answer);
 }
 
 /**
@@ -35,7 +37,7 @@ const answerButtonEvent = (e) => {
     displayAnswer(answer);
 
     // Execute only after the event is done
-    registerAnswer();
+    registerAnswer(answer);
 }
 
 // All the recornized click events, one will exclude the other
