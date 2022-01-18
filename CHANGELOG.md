@@ -14,3 +14,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Basic HTML+CSS+JS structure
 - Implement basic interaction with the logic
 - Convert to a PWA with the help of PWA Builder
+- Implement basic storage as a "history" feature
