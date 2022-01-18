@@ -15,3 +15,8 @@ Deploy the `src/` folder to your server, it will have all the necessary elements
 ## Usage
 
 Click on the `Get an answer!` button and enjoy the answer
+
+## Credits
+
+- Wikipedia for the favicon image, and the texts
+- PWABuilder for the icon generation
