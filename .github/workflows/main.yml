@@ -1,0 +1,19 @@
+# All your branches, your CI/CD
+# Complete documentation at: https://docs.github.com/en/actions
+
+name: Main
+
+on: [push]
+
+jobs:
+  Deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.7
+        with:
+          branch: gh-pages
+          folder: src
