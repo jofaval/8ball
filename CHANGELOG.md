@@ -12,3 +12,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Repository initialized
 - Implement very basic Github Actions yml to deploy
 - Basic HTML+CSS+JS structure
+- Implement basic interaction with the logic

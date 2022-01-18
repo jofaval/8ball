@@ -1,9 +1,11 @@
 html,
 body
 {
-    background: black;
     padding: 0;
     margin: 0;
+
+    background: black;
+    color: white;
 }
 
 *
@@ -25,4 +27,9 @@ body
     width: 100%;
     background: black;
     color: white;
+}
+
+#answer
+{
+    text-align: center;
 }
