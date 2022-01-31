@@ -29,6 +29,34 @@ const retrieve = () => {
 const now = () => new Date().getTime();
 
 /**
+ * Saves the global state
+ * 
+ * @param {Object} rawState 
+ * 
+ * @returns {void}
+ */
+const saveState = rawState => {
+    const preparedState = JSON.stringify(rawState);
+    localStorage.setItem(MAIN_KEY, preparedState);
+}
+
+/**
+ * Creates the answer object
+ * 
+ * @param {string} answer The answer
+ * @param {string} lang The lang of the answer, "en" by default
+ * 
+ * @returns {Object}
+ */
+const createAnswer = (answer, lang = "en") => {
+    return {
+        lang,
+        answer,
+        time: now(),
+    }
+}
+
+/**
  * Stores a new answer
  * 
  * @param {string} answer The answer to append
@@ -36,15 +64,10 @@ const now = () => new Date().getTime();
  * @returns {void}
  */
 const store = (answer) => {
-    const answerObject = {
-        lang: "en",
-        answer,
-        time: now(),
-    };
-    
+    const answerObject = createAnswer(answer);
+
     const storedAnswers = retrieve();
     storedAnswers.push(answerObject);
 
-    const preparedAnswers = JSON.stringify(storedAnswers);
-    localStorage.setItem(MAIN_KEY, preparedAnswers);
+    saveState(storedAnswers);
 }
